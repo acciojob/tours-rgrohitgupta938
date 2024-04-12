@@ -11,7 +11,7 @@ const Tour = ({ data, onDelete }) => {
       </div>
       <div className="tour-info">
         <h2>{name}</h2>
-        <p>
+        <p id={`tour-item-para-${id}`}>
           {show ? info : `${info.substring(0, 200)}...`}
           <button onClick={() => setShow((prev) => !prev)}>
             {show ? "Show Less" : "Read More"}
@@ -19,7 +19,9 @@ const Tour = ({ data, onDelete }) => {
         </p>
         <p>Rs{price}/-</p>
         <div>
-          <button onClick={() => onDelete(id)}>Remove</button>
+          <button id={`delete-btn-${id}`} onClick={() => onDelete(id)}>
+            Remove
+          </button>
         </div>
       </div>
     </div>
