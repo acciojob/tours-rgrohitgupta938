@@ -13,7 +13,10 @@ const Tour = ({ data, onDelete }) => {
         <h2>{name}</h2>
         <p id={`tour-item-para-${id}`}>
           {show ? info : `${info.substring(0, 200)}...`}
-          <button onClick={() => setShow((prev) => !prev)}>
+          <button
+            id={`see-more-${id}`}
+            onClick={() => setShow((prev) => !prev)}
+          >
             {show ? "Show Less" : "Read More"}
           </button>
         </p>
