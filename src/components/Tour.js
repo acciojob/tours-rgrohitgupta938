@@ -17,7 +17,7 @@ const Tour = ({ data, onDelete }) => {
             id={`see-more-${id}`}
             onClick={() => setShow((prev) => !prev)}
           >
-            {show ? "Show Less" : "Read More"}
+            {show ? "Show less" : "See more"}
           </button>
         </p>
         <p>Rs{price}/-</p>
